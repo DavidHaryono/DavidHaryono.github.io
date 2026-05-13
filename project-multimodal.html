@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multimodal Misinformation Detection — David Alexander Haryono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" id="glow"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">DAH.</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="index.html#projects" class="back-link">&#8592; Back to projects</a>
+    <div class="detail-role">Machine Learning Researcher &nbsp;·&nbsp; Feb 2025 – Jun 2025</div>
+    <h1 class="detail-title">Multimodal Misinformation Detection</h1>
+    <p class="detail-summary">
+      A multimodal deep learning model that fuses textual and visual signals using BERT and ResNet50
+      to detect misinformation more accurately than single-modality approaches.
+    </p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="img-placeholder">
+        <span class="ph-icon">🖼</span>
+        <span>Add model architecture diagram or pipeline overview here</span>
+      </div>
+
+      <h2 class="detail-section-title">Overview</h2>
+      <div class="detail-placeholder">
+        <div class="placeholder-label">✏️ Fill in: Project overview</div>
+        Why does misinformation detection benefit from multimodal inputs (text + image)?
+        What dataset did you use? What was the baseline you were trying to beat?
+      </div>
+
+      <h2 class="detail-section-title">Architecture</h2>
+      <div class="detail-placeholder">
+        <div class="placeholder-label">✏️ Fill in: Model design</div>
+        Describe the architecture in detail:
+        How does BERT encode the text modality?
+        How does ResNet50 process the image modality?
+        How are the two feature vectors fused (concatenation, attention, etc.)?
+        What is the final classification head?
+      </div>
+
+      <div class="img-placeholder" style="aspect-ratio: 16/7;">
+        <span class="ph-icon">🔬</span>
+        <span>Add feature fusion diagram or training curves here</span>
+      </div>
+
+      <h2 class="detail-section-title">Implementation</h2>
+      <div class="detail-placeholder">
+        <div class="placeholder-label">✏️ Fill in: Engineering details</div>
+        What frameworks did you use? How did you handle the data pipeline for cross-modal inputs?
+        What were the biggest engineering challenges (e.g., aligning text-image pairs, GPU memory)?
+      </div>
+
+      <h2 class="detail-section-title">Results</h2>
+      <div class="detail-placeholder">
+        <div class="placeholder-label">✏️ Fill in: Performance metrics</div>
+        Report your key metrics (accuracy, F1, AUC-ROC).
+        How did the multimodal model compare to text-only and image-only baselines?
+        Include a results table or chart if you have one.
+      </div>
+
+      <h2 class="detail-section-title">Future Work</h2>
+      <div class="detail-placeholder">
+        <div class="placeholder-label">✏️ Fill in: What's next</div>
+        What would you explore next? Cross-lingual misinformation? Newer vision-language
+        models like CLIP or LLaVA? Real-time detection APIs?
+      </div>
+    </div>
+
+    <div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Timeline</div>
+        <div class="detail-sidebar-value">Feb 2025 – Jun 2025</div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Role</div>
+        <div class="detail-sidebar-value">Machine Learning Researcher</div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Tech Stack</div>
+        <div class="detail-tag-list">
+          <span class="detail-tag">Python</span>
+          <span class="detail-tag">PyTorch</span>
+          <span class="detail-tag">BERT</span>
+          <span class="detail-tag">ResNet50</span>
+          <span class="detail-tag">TensorFlow</span>
+          <span class="detail-tag">Pandas</span>
+          <span class="detail-tag">NumPy</span>
+        </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Domains</div>
+        <div class="detail-tag-list">
+          <span class="detail-tag">Multimodal Learning</span>
+          <span class="detail-tag">NLP</span>
+          <span class="detail-tag">Computer Vision</span>
+          <span class="detail-tag">Fact Checking</span>
+        </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Links</div>
+        <div class="detail-sidebar-value">
+          <div class="detail-placeholder" style="margin:0; padding: 12px 16px;">
+            <div class="placeholder-label">✏️ Add links</div>
+            GitHub repo, paper/report, or Jupyter notebook
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 David Alexander Haryono</span>
+    <a href="index.html#projects" style="color: var(--text-muted); text-decoration: none;">&#8592; All Projects</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

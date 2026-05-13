@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David Alexander Haryono — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor-glow" id="glow"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">DAH.</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">// Computer Science Student · AI/ML Researcher</p>
+    <h1 class="hero-name">David<br>Alexander<br><span>Haryono.</span></h1>
+    <p class="hero-desc">
+      Building intelligent systems at the intersection of language, vision, and human interaction.
+      Currently on exchange at Xi'an JiaoTong-Liverpool University.
+    </p>
+    <div class="hero-tags">
+      <span class="tag">Natural Language Processing</span>
+      <span class="tag">Multimodal Learning</span>
+      <span class="tag">Web Development</span>
+      <span class="tag">Cloud Engineering</span>
+      <span class="tag">Cryptography</span>
+    </div>
+    <div class="hero-scroll">Scroll down</div>
+  </section>
+
+  <!-- ABOUT / EDUCATION -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">01</span>
+      <h2 class="section-title">About</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        I'm a Computer Science student specializing in <em>AI, NLP, and multimodal systems</em>.
+        I've built platforms that detect misinformation, teach sign language through gestures,
+        and moderate toxic content at scale — all powered by
+        <em>transformer models and modern deep learning</em>.
+        <br><br>
+        Currently enrolled in an international exchange program, expanding my perspective
+        alongside technical depth.
+      </div>
+      <div class="edu-list reveal">
+        <div class="edu-item">
+          <div class="edu-school">Bina Nusantara University</div>
+          <div class="edu-degree">Bachelor of Computer Science — Global Class</div>
+          <div class="edu-date">Sept. 2023 – Expected Feb. 2027 · Jakarta, Indonesia</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">Xi'an JiaoTong-Liverpool University</div>
+          <div class="edu-degree">Computer Science — International Exchange Program</div>
+          <div class="edu-date">Feb. 2026 – Jun. 2026</div>
+          <span class="edu-badge">Currently Enrolled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">02</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <a href="project-signlingo.html" class="project-card reveal">
+        <div class="project-num">01 / 03</div>
+        <div class="project-title">SignLingo — AI Sign Language Learning Platform</div>
+        <div class="project-role">Developer · Feb 2025 – Jun 2025</div>
+        <ul class="project-bullets">
+          <li>Web platform for learning sign language via gamified quizzes and video-based modules</li>
+          <li>AI-assisted hand detection system for real-time gesture feedback</li>
+          <li>Integrated BISINDO-specific sign logic including complex gesture patterns</li>
+        </ul>
+        <div class="project-tags">
+          <span class="project-tag">OpenCV</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Web Dev</span>
+          <span class="project-tag">AI/ML</span>
+        </div>
+        <div class="project-cta">View details &#8599;</div>
+      </a>
+
+      <a href="project-nlp-moderation.html" class="project-card reveal" style="transition-delay: 0.1s">
+        <div class="project-num">02 / 03</div>
+        <div class="project-title">NLP-Powered Content Moderation Engine</div>
+        <div class="project-role">NLP Researcher · Sept 2025 – Feb 2026</div>
+        <ul class="project-bullets">
+          <li>Multi-label toxic comment classification using Jigsaw dataset</li>
+          <li>Comparative analysis: BERT deep learning vs. Multinomial Naive Bayes</li>
+          <li>Fine-tuned transformer models for toxicity and misinformation detection</li>
+        </ul>
+        <div class="project-tags">
+          <span class="project-tag">BERT</span>
+          <span class="project-tag">NLTK</span>
+          <span class="project-tag">PyTorch</span>
+          <span class="project-tag">NLP</span>
+        </div>
+        <div class="project-cta">View details &#8599;</div>
+      </a>
+
+      <a href="project-multimodal.html" class="project-card reveal" style="transition-delay: 0.2s">
+        <div class="project-num">03 / 03</div>
+        <div class="project-title">Multimodal Misinformation Detection Model</div>
+        <div class="project-role">ML Researcher · Feb 2025 – Jun 2025</div>
+        <ul class="project-bullets">
+          <li>Multimodal model combining BERT (text) + ResNet50 (image) architectures</li>
+          <li>Cross-modal feature fusion for richer misinformation signals</li>
+          <li>Python-based frameworks for data processing pipelines</li>
+        </ul>
+        <div class="project-tags">
+          <span class="project-tag">BERT</span>
+          <span class="project-tag">ResNet50</span>
+          <span class="project-tag">TensorFlow</span>
+          <span class="project-tag">Multimodal</span>
+        </div>
+        <div class="project-cta">View details &#8599;</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-label">03</span>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">C/C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">PHP</span>
+          <span class="skill-pill">R</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay: 0.1s">
+        <div class="skill-group-label">AI / Machine Learning</div>
+        <div class="skill-pills">
+          <span class="skill-pill">PyTorch</span>
+          <span class="skill-pill">TensorFlow</span>
+          <span class="skill-pill">Scikit-learn</span>
+          <span class="skill-pill">BERT</span>
+          <span class="skill-pill">ResNet50</span>
+          <span class="skill-pill">OpenCV</span>
+          <span class="skill-pill">NLTK</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">NumPy</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay: 0.15s">
+        <div class="skill-group-label">Web &amp; Backend</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">Laravel</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-group reveal" style="transition-delay: 0.2s">
+        <div class="skill-group-label">Tools &amp; DevOps</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Jupyter Notebook</span>
+          <span class="skill-pill">Google Colab</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs">
+    <div class="section-header reveal">
+      <span class="section-label">04</span>
+      <h2 class="section-title">Certifications</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="certs-list">
+
+      <!-- Alibaba — opens cert image -->
+      <a href="AlibabaCert.jpeg" target="_blank" class="cert-item reveal">
+        <div class="cert-icon">
+          <img src="AlibabaCert.jpeg" alt="Alibaba Cloud Certificate" />
+        </div>
+        <div>
+          <div class="cert-name">Alibaba Cloud Certified Associate: Cloud Engineer</div>
+          <div class="cert-issuer">Alibaba Cloud · Valid until May 15, 2027</div>
+          <div class="cert-link-hint">View certificate &#8599;</div>
+        </div>
+      </a>
+
+      <!-- AWS Cert 1 — Credly badge -->
+      <a href="https://www.credly.com/badges/e94b3a0d-e7b8-4b80-91af-90182c67fac6/public_url"
+         target="_blank" rel="noopener noreferrer" class="cert-item reveal" style="transition-delay: 0.1s">
+        <div class="cert-icon">&#9889;</div>
+        <div>
+          <div class="cert-name">AWS Educate Introduction to Cloud 101</div>
+          <div class="cert-issuer">Amazon Web Services · May 2025</div>
+          <div class="cert-link-hint">View on Credly &#8599;</div>
+        </div>
+      </a>
+
+      <!-- AWS Cert 2 — Credly badge -->
+      <a href="https://www.credly.com/badges/7baff727-e76a-4c6f-9068-0d03dae86e82/public_url"
+         target="_blank" rel="noopener noreferrer" class="cert-item reveal" style="transition-delay: 0.2s">
+        <div class="cert-icon">&#128421;</div>
+        <div>
+          <div class="cert-name">AWS Educate Getting Started with Compute</div>
+          <div class="cert-issuer">Amazon Web Services · May 2025</div>
+          <div class="cert-link-hint">View on Credly &#8599;</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <h2 class="contact-heading">Let's<br><span>connect.</span></h2>
+        <p class="contact-sub">
+          Open to research collaborations, internship opportunities, and interesting projects
+          in AI, NLP, or full-stack development.
+        </p>
+      </div>
+      <div class="contact-links reveal">
+        <a href="mailto:davidalexharyono22@gmail.com" class="contact-link">
+          <span>davidalexharyono22@gmail.com</span>
+          <span class="contact-link-arrow">&#8599;</span>
+        </a>
+        <a href="tel:+6281227018127" class="contact-link">
+          <span>+62 812 2701 8127</span>
+          <span class="contact-link-arrow">&#8599;</span>
+        </a>
+        <a href="http://www.reallygreatsite.com" target="_blank" class="contact-link">
+          <span>www.reallygreatsite.com</span>
+          <span class="contact-link-arrow">&#8599;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 David Alexander Haryono</span>
+    <span>Jakarta, Indonesia</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
