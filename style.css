@@ -4,14 +4,14 @@
   --surface: #0d1318;
   --surface2: #121a22;
   --border: #1e2d3d;
-  --accent: #00e5c3;
+  --accent: #764ad5;
   --accent2: #0077ff;
-  --accent-dim: rgba(0, 229, 195, 0.12);
+  --accent-dim: rgba(141, 0, 229, 0.092);
   --text: #e2ecf5;
   --text-muted: #5a7a96;
   --text-mid: #8ba8c0;
   --shadow: rgba(0,0,0,0.4);
-  --grid-line: rgba(0,229,195,0.025);
+  --grid-line: rgba(122, 0, 229, 0.025);
   --nav-bg: rgba(8,12,16,0.85);
 }
 
@@ -20,9 +20,9 @@ body.light {
   --surface: #ffffff;
   --surface2: #eef1f4;
   --border: #d0d9e3;
-  --accent: #00a896;
+  --accent: #764ad5;
   --accent2: #0055cc;
-  --accent-dim: rgba(0, 168, 150, 0.1);
+  --accent-dim: rgba(141, 0, 229, 0.092);
   --text: #0d1318;
   --text-muted: #7a94aa;
   --text-mid: #3d5a70;
@@ -310,7 +310,7 @@ body.light #projects { background: linear-gradient(to bottom, transparent, rgba(
   transition: transform 0.4s ease;
 }
 .project-card:hover {
-  border-color: rgba(0,229,195,0.4);
+  border-color: rgba(84, 0, 229, 0.4);
   background: var(--surface2);
   transform: translateY(-3px);
   box-shadow: 0 12px 32px var(--shadow);
@@ -433,7 +433,7 @@ body.light .skill-pill { background: rgba(0,0,0,0.03); }
 }
 .cert-item:hover {
   background: var(--surface2);
-  border-color: rgba(0,229,195,0.4);
+  border-color: rgba(111, 0, 229, 0.4);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--shadow);
 }
@@ -543,14 +543,14 @@ footer {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,229,195,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(107, 0, 229, 0.079) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);
   transition: left 0.12s, top 0.12s;
 }
 body.light .cursor-glow {
-  background: radial-gradient(circle, rgba(0,168,150,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(107, 0, 229, 0.064) 0%, transparent 70%);
 }
 
 /* ─── ANIMATIONS ─── */
@@ -676,22 +676,99 @@ body.light .cursor-glow {
   padding: 4px 10px;
   border-radius: 6px;
 }
-.img-placeholder {
+
+
+
+/* ==========================================================================
+   ─── CHOSEN IMAGE UTILITY PIPELINES (Separated for Layout Roles) ───
+   ========================================================================== */
+
+/* 1. STANDARD HORIZONTAL IMAGES (For SignLingo App Screenshots & Dashboards) */
+.img-container {
   width: 100%;
-  aspect-ratio: 16/9;
-  background: var(--surface);
-  border: 1px dashed var(--border);
+  margin-top: 0;
+  margin-bottom: 32px;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: var(--text-muted);
-  font-size: 12px;
-  margin-bottom: 20px;
+  overflow: hidden;
+  background: var(--surface); /* Syncs beautifully with your dark/light theme background */
+  border: 1px solid var(--border); /* Uses your native border color */
+  box-shadow: 0 12px 32px var(--shadow); /* Uses your native theme drop shadow */
 }
-.img-placeholder .ph-icon { font-size: 28px; opacity: 0.4; }
+
+/* Allows horizontal screenshots to expand safely to the full content width */
+.img-container .project-detail-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Fills the container seamlessly without any blank spaces */
+}
+
+
+/* 2. TALL VERTICAL DIAGRAMS ONLY (Specifically for the Multimodal Flowchart) */
+.img-container.vertical-chart {
+  aspect-ratio: 16/9;        /* Locks the box size into your exact layout grid standard */
+  background: #000000;       /* Restricts leftover side regions to solid black only */
+  display: flex;
+  justify-content: center;   /* Centers the narrow diagram horizontally */
+  align-items: center;       /* Centers the diagram vertically */
+}
+
+/* Forces the narrow diagram to touch top/bottom perfectly, creating side-only black bars */
+.img-container.vertical-chart .project-detail-img {
+  height: 100%;              /* Flushes completely with the top and bottom borders */
+  width: auto;               /* Allows the width to scale naturally without horizontal stretching */
+  max-width: 100%;
+  object-fit: contain;       /* Prevents text or line elements from getting cropped out */
+}
+/* ─── PORTFOLIO DATA TABLES ─── */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Enables smooth horizontal scrolling on mobile screens */
+  margin: 24px 0 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface); /* Inherits your theme background color */
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.portfolio-table th {
+  background: var(--surface2); /* Darker heading line */
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-table tr:last-child td {
+  border-bottom: none; /* Cleans up the bottom border roundings */
+}
+
+.portfolio-table .highlight-text {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Accent row highlighting for your peak experimental result */
+.portfolio-table tr.active-row {
+  background: rgba(0, 229, 195, 0.03); /* Subtle signature highlight */
+}
+.portfolio-table tr.active-row td {
+  color: var(--accent); /* Changes final metric color to cyan */
+}
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {

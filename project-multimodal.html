@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Multimodal Misinformation Detection — David Alexander Haryono</title>
+  <title>Multimodal Fake News Detection — David Alexander Haryono</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -29,63 +29,205 @@
 
   <div class="detail-hero">
     <a href="index.html#projects" class="back-link">&#8592; Back to projects</a>
-    <div class="detail-role">Machine Learning Researcher &nbsp;·&nbsp; Feb 2025 – Jun 2025</div>
-    <h1 class="detail-title">Multimodal Misinformation Detection</h1>
+    <div class="detail-role">ML Researcher &nbsp;·&nbsp; Feb 2025 – Jun 2025</div>
+    <h1 class="detail-title">Multimodal Misinformation Detection Model</h1>
     <p class="detail-summary">
-      A multimodal deep learning model that fuses textual and visual signals using BERT and ResNet50
-      to detect misinformation more accurately than single-modality approaches.
+      A research-grade deep learning architecture designed to combat online misinformation by cross-referencing and 
+      fusing semantic textual embeddings with high-dimensional visual feature spaces.
     </p>
   </div>
 
   <div class="detail-body">
     <div>
-      <div class="img-placeholder">
-        <span class="ph-icon">🖼</span>
-        <span>Add model architecture diagram or pipeline overview here</span>
+      <div class="img-container vertical-chart" style="max-height: 600px; background: var(--surface);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" style="width: 100%; height: 100%; font-family: 'DM Mono', monospace;">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--text-muted)" />
+            </marker>
+            <marker id="arrow-accent" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--accent)" />
+            </marker>
+          </defs>
+
+          <rect x="40" y="20" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="130" y="47" font-size="13" fill="var(--text)" text-anchor="middle" dominant-baseline="central" font-weight="600">Image Input</text>
+          
+          <line x1="130" y1="74" x2="130" y2="114" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="40" y="114" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="130" y="141" font-size="12" fill="var(--text-mid)" text-anchor="middle" dominant-baseline="central">Pretrained ResNet50</text>
+          
+          <line x1="130" y1="168" x2="130" y2="208" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="40" y="208" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="130" y="235" font-size="12" fill="var(--text)" text-anchor="middle" dominant-baseline="central">Extract Image Feature</text>
+          <text x="130" y="252" font-size="10" fill="var(--text-muted)" text-anchor="middle" dominant-baseline="central">(2,048d Vector)</text>
+
+
+          <rect x="380" y="20" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="470" y="47" font-size="13" fill="var(--text)" text-anchor="middle" dominant-baseline="central" font-weight="600">Text Headline</text>
+          
+          <line x1="470" y1="74" x2="470" y2="114" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="380" y="114" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="470" y="141" font-size="12" fill="var(--text-mid)" text-anchor="middle" dominant-baseline="central">Pretrained BERT</text>
+          
+          <line x1="470" y1="168" x2="470" y2="208" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="380" y="208" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="470" y="235" font-size="12" fill="var(--text)" text-anchor="middle" dominant-baseline="central">Extract Text Feature</text>
+          <text x="470" y="252" font-size="10" fill="var(--text-muted)" text-anchor="middle" dominant-baseline="central">([CLS] 768d Vector)</text>
+
+
+          <path d="M 130 262 L 130 290 L 240 290 L 270 314" fill="none" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+          
+          <path d="M 470 262 L 470 290 L 360 290 L 330 314" fill="none" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="210" y="320" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <text x="300" y="347" font-size="13" fill="var(--accent)" text-anchor="middle" dominant-baseline="central" font-weight="600">Feature Fusion</text>
+          
+          <line x1="300" y1="374" x2="300" y2="414" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <rect x="210" y="414" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="300" y="435" font-size="12" fill="var(--text)" text-anchor="middle" dominant-baseline="central">Concatenated Feature</text>
+          <text x="300" y="452" font-size="10" fill="var(--text-muted)" text-anchor="middle" dominant-baseline="central">(Combined 2,816d Array)</text>
+          
+          <line x1="300" y1="468" x2="300" y2="508" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+
+          <rect x="210" y="508" width="180" height="54" rx="8" fill="var(--surface2)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="300" y="535" font-size="13" fill="var(--text)" text-anchor="middle" dominant-baseline="central" font-weight="600">Model Training</text>
+          <text x="300" y="552" font-size="10" fill="var(--accent)" text-anchor="middle" dominant-baseline="central">Dense Layers + Sigmoid</text>
+        </svg>
       </div>
 
       <h2 class="detail-section-title">Overview</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Project overview</div>
-        Why does misinformation detection benefit from multimodal inputs (text + image)?
-        What dataset did you use? What was the baseline you were trying to beat?
+      <div class="detail-content">
+        <p>
+          Modern digital misinformation is increasingly complex, frequently combining authentic imagery with fabricated text 
+          to deceive traditional text-only classification systems. Rather than treating text headlines or visual elements as 
+          isolated factors, this project introduces an integrated deep learning architecture that flags contradictions and mismatches 
+          between modalities. 
+        </p>
+        <p>
+          Trained on the massive 106GB <strong>Fakeddit dataset</strong>, this model establishes a higher barrier against deceptive media 
+          by analyzing cross-modal relationships directly inside a joint latent mathematical space.
+        </p>
       </div>
 
-      <h2 class="detail-section-title">Architecture</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Model design</div>
-        Describe the architecture in detail:
-        How does BERT encode the text modality?
-        How does ResNet50 process the image modality?
-        How are the two feature vectors fused (concatenation, attention, etc.)?
-        What is the final classification head?
+      <h2 class="detail-section-title">Model Architecture &amp; Fusion Strategy</h2>
+      <div class="detail-content">
+        <p>
+          The network runs parallel dual-stream feature extraction pipelines before concatenating the representations into a final 
+          multi-modal classification block:
+        </p>
+        <ul style="padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
+          <li>
+            <strong>Textual Pipeline (NLP):</strong> Utilizes a pre-trained <code>bert-base-uncased</code> transformer model to read contextual sequences from headlines, 
+            isolating the dense 768-dimensional <code>[CLS]</code> token's pooler representation.
+          </li>
+          <li>
+            <strong>Visual Pipeline (CV):</strong> Employs a pre-trained <code>ResNet50</code> backbone (trained on ImageNet-1K), stripped of its final dense classification head, 
+            yielding a structural 2,048-dimensional representation vector of the image asset.
+          </li>
+          <li>
+            <strong>Cross-Modal Fusion Array:</strong> Mathematically concatenates the 768d text vector and 2,048d image vector into a single unified 2,816-dimensional feature array.
+          </li>
+          <li>
+            <strong>Classification Head:</strong> Feeds the combined 2,816-dimensional vector through a sequential dense stack: 
+            <code>Linear(2816 -> 256)</code> ➔ <code>ReLU</code> ➔ <code>Dropout(p=0.3)</code> ➔ <code>Linear(256 -> 1)</code>, finalized with a <code>Sigmoid</code> activation for final binary authenticity output.
+          </li>
+        </ul>
       </div>
 
-      <div class="img-placeholder" style="aspect-ratio: 16/7;">
-        <span class="ph-icon">🔬</span>
-        <span>Add feature fusion diagram or training curves here</span>
+      <h2 class="detail-section-title">My Research Contributions</h2>
+      <div class="detail-content">
+        <p>
+          Working closely alongside my co-researcher, Evan Samuel Widjaja, my engineering ownership focused heavily on the natural language processing pipeline 
+          and the mathematical implementation of the cross-modal alignment framework:
+        </p>
+        <ul>
+          <li>
+            <strong>Fusion Architecture Design:</strong> Conceived and built the alignment module that structurally joins disparate tensor weights into a cohesive multimodal representation space.
+          </li>
+          <li>
+            <strong>Transformer Optimization:</strong> Configured and tuned the <code>bert-base-uncased</code> NLP processing parameters to safely capture deep semantic cues from headline sentences.
+          </li>
+          <li>
+            <strong>Classification Tuning &amp; Regularization:</strong> Structured the sequential layers of the deep classification head and optimized the dropout probability ratios to heavily reduce overfitting over the multi-epoch training iterations.
+          </li>
+        </ul>
       </div>
 
-      <h2 class="detail-section-title">Implementation</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Engineering details</div>
-        What frameworks did you use? How did you handle the data pipeline for cross-modal inputs?
-        What were the biggest engineering challenges (e.g., aligning text-image pairs, GPU memory)?
+      <div class="table-container">
+        <table class="portfolio-table">
+          <thead>
+            <tr>
+              <th>Experiment Baseline</th>
+              <th>Accuracy</th>
+              <th>Precision</th>
+              <th>Recall</th>
+              <th>F1-Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="highlight-text">Multinomial Naïve Bayes</td>
+              <td>79.912%</td>
+              <td>79.750%</td>
+              <td>79.735%</td>
+              <td>79.912%</td>
+            </tr>
+            <tr>
+              <td class="highlight-text">Random Forest</td>
+              <td>81.070%</td>
+              <td>80.949%</td>
+              <td>80.841%</td>
+              <td>81.070%</td>
+            </tr>
+            <tr class="active-row">
+              <td class="highlight-text">Multimodal Fusion (Ours)</td>
+              <td>82.834%</td>
+              <td>74.020%</td>
+              <td>87.386%</td>
+              <td>80.151%</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <h2 class="detail-section-title">Results</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Performance metrics</div>
-        Report your key metrics (accuracy, F1, AUC-ROC).
-        How did the multimodal model compare to text-only and image-only baselines?
-        Include a results table or chart if you have one.
-      </div>
-
-      <h2 class="detail-section-title">Future Work</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: What's next</div>
-        What would you explore next? Cross-lingual misinformation? Newer vision-language
-        models like CLIP or LLaVA? Real-time detection APIs?
+      <h2 class="detail-section-title">Experimental Results &amp; Trust-Safety Impact</h2>
+      <div class="detail-content">
+        <p>
+          Following a complete **8-epoch training run** across the unseen test partitions of the Fakeddit ecosystem, the network reached peak performance metrics:
+        </p>
+        <table style="width:100%; border-collapse: collapse; margin: 20px 0; color: var(--text-muted);">
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <th style="text-align:left; padding: 10px; color: var(--text-main);">Metric</th>
+            <th style="text-align:right; padding: 10px; color: var(--accent);">Final Value</th>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <td style="padding: 10px;">Classification Accuracy</td>
+            <td style="text-align:right; padding: 10px; font-family: 'DM Mono', monospace;">82.834%</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <td style="padding: 10px;">Precision</td>
+            <td style="text-align:right; padding: 10px; font-family: 'DM Mono', monospace;">74.020%</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <td style="padding: 10px; font-weight: 600; color: var(--text-main);">Recall (Sensitivity)</td>
+            <td style="text-align:right; padding: 10px; font-family: 'DM Mono', monospace; font-weight: 600; color: var(--accent);">87.386%</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <td style="padding: 10px;">F1-Score</td>
+            <td style="text-align:right; padding: 10px; font-family: 'DM Mono', monospace;">80.151%</td>
+          </tr>
+        </table>
+        <p>
+          The defining success of this architecture is its exceptionally high <strong>87.386% Recall</strong>. 
+          In real-world trust and safety platform filtering systems, maximizing sensitivity is paramount because it heavily minimizes false negatives. 
+          This ensures that harmful, mismatched deceptive content rarely leaks past automated moderations unflagged.
+        </p>
       </div>
     </div>
 
@@ -102,30 +244,33 @@
         <div class="detail-sidebar-label">Tech Stack</div>
         <div class="detail-tag-list">
           <span class="detail-tag">Python</span>
-          <span class="detail-tag">PyTorch</span>
-          <span class="detail-tag">BERT</span>
+          <span class="detail-tag">PyTorch / TF</span>
+          <span class="detail-tag">BERT Transformer</span>
           <span class="detail-tag">ResNet50</span>
-          <span class="detail-tag">TensorFlow</span>
-          <span class="detail-tag">Pandas</span>
-          <span class="detail-tag">NumPy</span>
+          <span class="detail-tag">CUDA Toolkit</span>
+          <span class="detail-tag">OpenCV</span>
+          <span class="detail-tag">Pandas / NumPy</span>
         </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Dataset Benchmark</div>
+        <div class="detail-sidebar-value">Fakeddit Misinformation Dataset (106GB Benchmark)</div>
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Domains</div>
         <div class="detail-tag-list">
-          <span class="detail-tag">Multimodal Learning</span>
-          <span class="detail-tag">NLP</span>
+          <span class="detail-tag">Multimodal AI</span>
+          <span class="detail-tag">Natural Language Processing</span>
           <span class="detail-tag">Computer Vision</span>
-          <span class="detail-tag">Fact Checking</span>
+          <span class="detail-tag">Trust &amp; Safety Systems</span>
         </div>
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Links</div>
         <div class="detail-sidebar-value">
-          <div class="detail-placeholder" style="margin:0; padding: 12px 16px;">
-            <div class="placeholder-label">✏️ Add links</div>
-            GitHub repo, paper/report, or Jupyter notebook
-          </div>
+          <a href="https://github.com/DavidHaryono/MultiModalResearch.git" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600;">
+            GitHub Repository &#8599;
+          </a>
         </div>
       </div>
     </div>

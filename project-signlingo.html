@@ -29,67 +29,109 @@
 
   <div class="detail-hero">
     <a href="index.html#projects" class="back-link">&#8592; Back to projects</a>
-    <div class="detail-role">Developer &nbsp;·&nbsp; Feb 2025 – Jun 2025</div>
-    <h1 class="detail-title">SignLingo</h1>
+    <div class="detail-role">Frontend &amp; Integration Developer &nbsp;·&nbsp; Feb 2025 – Jun 2025</div>
+    <h1 class="detail-title">SignLingo — AI Sign Language Learning Platform</h1>
     <p class="detail-summary">
-      An AI-powered web platform for learning Indonesian Sign Language (BISINDO) through gamified quizzes,
-      video modules, and real-time hand gesture recognition.
+      An interactive, gamified educational web application that makes sign language accessible by blending structured video modules, 
+      image-based quizzes, and real-time computer vision models for webcam gesture recognition.
     </p>
   </div>
 
   <div class="detail-body">
-    <!-- LEFT: Main content -->
     <div>
-      <!-- Banner image placeholder -->
-      <div class="img-placeholder">
-        <span class="ph-icon">🖼</span>
-        <span>Add a project screenshot or demo GIF here</span>
+      <div class="img-container">
+        <img src="images/signlingo-webcam-demo.png" 
+             alt="SignLingo Live Webcam Interface showcasing MediaPipe hand-tracking and real-time gesture validation loops" 
+             class="project-detail-img">
       </div>
 
       <h2 class="detail-section-title">Overview</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Project overview</div>
-        Describe what SignLingo is, why you built it, and what problem it solves.
-        Example: "SignLingo was born out of the gap in accessible tools for learning BISINDO…"
+      <div class="detail-content">
+        <p>
+          Learning a spatial-visual language like sign language traditionally suffers from a lack of immediate correction. 
+          <strong>SignLingo</strong> addresses this disconnect by shifting sign language learning away from passive video-watching 
+          into an interactive environment. 
+        </p>
+        <p>
+          The web application coordinates structured text and media assets with a real-time, browser-driven machine learning 
+          pipeline. This structure gives students instantaneous evaluation scores on their hand configurations 
+          and tracks their daily engagement milestones through automated persistence layers.
+        </p>
       </div>
 
-      <h2 class="detail-section-title">My Contributions</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: What you built</div>
-        Walk through your specific role. What features did you personally implement?
-        What was the hardest technical challenge you solved?
+      <h2 class="detail-section-title">Gamification Mechanics &amp; UI Systems</h2>
+      <div class="detail-content">
+        <p>
+          To maintain high user retention, the application implements an array of student engagement features 
+          and responsive styling definitions:
+        </p>
+        <ul style="padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
+          <li>
+            <strong>Real-time Validation Engine:</strong> Integrates custom computer vision workflows running 
+            <code>OpenCV</code> and <code>MediaPipe</code> behind a <code>TensorFlow/Keras</code> backbone to capture webcam frames 
+            and evaluate custom BISINDO gesture structures instantly.
+          </li>
+          <li>
+            <strong>Interactive Assessment Elements:</strong> Deploys multiple-choice quizzes that pull data from image matrices, 
+            triggering instantaneous feedback loops and matching sound sets when inputs are evaluated.
+          </li>
+          <li>
+            <strong>Progress Visualization &amp; Streaks:</strong> Renders animated progress components and lesson status metrics 
+            (<code>Completed</code>, <code>Current</code>, <code>Not Started</code>) coupled with a backend-validated daily streak system to build consistent habits.
+          </li>
+        </ul>
       </div>
 
-      <h2 class="detail-section-title">Technical Deep Dive</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Architecture &amp; implementation details</div>
-        Explain how the hand detection pipeline works (e.g., MediaPipe + OpenCV),
-        how gestures are classified, how the gamification logic is structured,
-        and how the frontend and backend are connected.
+      <h2 class="detail-section-title">My Engineering Contributions</h2>
+      <div class="detail-content">
+        <p>
+          As a <strong>Frontend &amp; Integration Developer</strong> on this collaborative engineering team, my responsibilities sat at the intersection of client-side design and secure server communication:
+        </p>
+        <ul>
+          <li>
+            <strong>Student Portal Engineering:</strong> Architected and built the main operational layouts for the user-facing subsystems, 
+            including the gamified quiz viewports, the personalized profile management page, and the competitive peer leaderboard dashboard.
+          </li>
+          <li>
+            <strong>Global Stylesheet Standardization:</strong> Programmed the comprehensive frontend styling framework and responsive animation systems, 
+            guaranteeing clean element shifting, smooth button state actions, and visual uniformity across viewports.
+          </li>
+          <li>
+            <strong>Frontend-to-Backend Integration:</strong> Established data link bindings connecting active user elements 
+            to server-side endpoints, ensuring smooth asynchronous transfer of scores, quiz models, and session profiles.
+          </li>
+        </ul>
       </div>
 
-      <!-- Extra image placeholder -->
-      <div class="img-placeholder" style="aspect-ratio: 4/3;">
-        <span class="ph-icon">📊</span>
-        <span>Add architecture diagram, model accuracy graph, or UI screenshots here</span>
+      <div class="img-container" style="aspect-ratio: 16/8.3;">
+        <img src="images/Signlingo2.png" 
+             alt="SignLingo Gamified Quiz Interface, progress tracking bars, and competitive friend leaderboard viewports" 
+             class="project-detail-img">
       </div>
 
-      <h2 class="detail-section-title">Results &amp; Impact</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Outcomes</div>
-        Did you demo it? How accurate was the gesture detection?
-        Any user feedback, demo day results, or metrics you can share?
+      <div class="img-container" style="aspect-ratio: 16/8.32;">
+        <img src="images/Signlingo1.png" 
+             alt="SignLingo Gamified Quiz Interface, progress tracking bars, and competitive friend leaderboard viewports" 
+             class="project-detail-img">
       </div>
 
-      <h2 class="detail-section-title">Lessons Learned</h2>
-      <div class="detail-placeholder">
-        <div class="placeholder-label">✏️ Fill in: Reflection</div>
-        What would you do differently? What did this project teach you about real-time ML,
-        web development, or working with domain-specific datasets like BISINDO?
+      <h2 class="detail-section-title">Backend Architecture &amp; Lifecycle Controls</h2>
+      <div class="detail-content">
+        <p>
+          The presentation layer connects directly to a structured, modular <strong>Flask micro-framework</strong> backend. 
+          Application pathways are organized using decoupled Flask Blueprints (such as <code>auth_bp</code>) to keep routing separate from 
+          core configuration spaces. 
+        </p>
+        <p>
+          Data states are mapped to an <code>SQLite</code> database layer instance via an <code>SQLAlchemy ORM</code> manager, utilizing 
+          <code>Flask-Migrate</code> schemas to run transactional database migrations cleanly. 
+          Furthermore, the app includes custom automated CLI shell initializers (<code>init-app</code>) to wipe, reset, 
+          and seed database rows with lessons and inventory catalogs from structural JSON definitions. 
+          It also configures robust verification systems via secure SMTP transport layers (<code>Flask-Mail</code>) to safely manage password retrieval.
+        </p>
       </div>
     </div>
 
-    <!-- RIGHT: Sidebar -->
     <div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Timeline</div>
@@ -97,36 +139,41 @@
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Role</div>
-        <div class="detail-sidebar-value">Developer</div>
+        <div class="detail-sidebar-value">Frontend &amp; Integration Developer</div>
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Tech Stack</div>
         <div class="detail-tag-list">
           <span class="detail-tag">Python</span>
-          <span class="detail-tag">OpenCV</span>
-          <span class="detail-tag">MediaPipe</span>
           <span class="detail-tag">Flask</span>
-          <span class="detail-tag">JavaScript</span>
-          <span class="detail-tag">HTML/CSS</span>
-          <span class="detail-tag">MySQL</span>
+          <span class="detail-tag">SQLAlchemy</span>
+          <span class="detail-tag">SQLite</span>
+          <span class="detail-tag">TensorFlow</span>
+          <span class="detail-tag">MediaPipe</span>
+          <span class="detail-tag">OpenCV</span>
+          <span class="detail-tag">JavaScript / HTML / CSS</span>
+          <span class="detail-tag">Docker</span>
         </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Architecture</div>
+        <div class="detail-sidebar-value">Modular Flask Blueprints with Local Client Computer Vision Streams</div>
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Domains</div>
         <div class="detail-tag-list">
-          <span class="detail-tag">Computer Vision</span>
-          <span class="detail-tag">Web Development</span>
-          <span class="detail-tag">Gamification</span>
-          <span class="detail-tag">Accessibility</span>
+          <span class="detail-tag">UI/UX Systems Engineering</span>
+          <span class="detail-tag">Client-Server Integration</span>
+          <span class="detail-tag">Gamification Design</span>
+          <span class="detail-tag">Asynchronous APIs</span>
         </div>
       </div>
       <div class="detail-sidebar-card">
         <div class="detail-sidebar-label">Links</div>
         <div class="detail-sidebar-value">
-          <div class="detail-placeholder" style="margin:0; padding: 12px 16px;">
-            <div class="placeholder-label">✏️ Add links</div>
-            GitHub repo, live demo, or presentation slides
-          </div>
+          <a href="https://github.com/DavidHaryono/SignlingoProject" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600;">
+            GitHub Repository &#8599;
+          </a>
         </div>
       </div>
     </div>

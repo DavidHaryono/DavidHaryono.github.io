@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Financial Tracker — David Alexander Haryono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow" id="glow"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">DAH.</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="detail-hero">
+    <a href="index.html#projects" class="back-link">&#8592; Back to projects</a>
+    <div class="detail-role">Full-Stack Engineer &nbsp;·&nbsp; Nov 2025 – Jan 2026</div>
+    <h1 class="detail-title">AI-Powered Financial Tracker Platform</h1>
+    <p class="detail-summary">
+      A collaborative full-stack web application designed to eliminate friction in manual budgeting by using 
+      automated multi-tier Vision LLM and OCR microservices to dynamically parse transactional data from receipts.
+    </p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="img-placeholder">
+        <span class="ph-icon">⚙️</span>
+        <span>[System Architecture Diagram: Client Upload ➔ Controller Streaming ➔ Vision Fallback Array ➔ MySQL Persistence]</span>
+      </div>
+
+      <h2 class="detail-section-title">Overview</h2>
+      <div class="detail-content">
+        <p>
+          Manual expense categorization and budget management are highly susceptible to user fatigue and clerical errors. 
+          This project solves that friction by introducing an automated, smart financial tracking layout built on top of the 
+          <strong>Laravel ecosystem</strong>. 
+        </p>
+        <p>
+          The application serves as an integrated, multi-user solution allowing real-time ingestion of physical receipt uploads. 
+          The platform parses structural data (merchant title, total transactional amount, consumer category) and seamlessly maps them against active user thresholds to enforce automated household accounting rules.
+        </p>
+      </div>
+
+      <h2 class="detail-section-title">System Architecture &amp; Vision Pipelines</h2>
+      <div class="detail-content">
+        <p>
+          The core technological innovation lies inside the abstract <code>ReceiptParserService</code>, which operates a 
+          resilient multi-tier fallback pipeline utilizing vision-centric deep learning structures:
+        </p>
+        <ol style="padding-left: 20px; line-height: 1.8; color: var(--text-muted);">
+          <li>
+            <strong>Primary Vision Tier:</strong> Leverages the Groq API running <code>llama-3.2-90b-vision-preview</code> for rapid, 
+            low-latency extraction of textual contexts paired with exact base64 image data matrix streams.
+          </li>
+          <li>
+            <strong>Secondary Vision Tier:</strong> In the event of primary exhaustion, a fallback layer calls Together AI running 
+            <code>meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo</code>.
+          </li>
+          <li>
+            <strong>Hybrid Tesseract Layer:</strong> Executes local client-side <code>Tesseract OCR</code> across multiple page segmentation modes (PSM), 
+            subsequently feeding extracted text tokens into an analytical <code>llama-3.1-70b-versatile</code> model to construct structured JSON representations.
+          </li>
+          <li>
+            <strong>Deterministic Fallback:</strong> Employs structured regex pattern matching and word score matrices to isolate fiscal numbers 
+            and merchant strings when standard web connectivity drops.
+          </li>
+        </ol>
+      </div>
+
+      <h2 class="detail-section-title">My Technical Contributions</h2>
+      <div class="detail-content">
+        <p>
+          As a lead engineer focused on <strong>Frontend Architecture and Layout Integration</strong>, my technical execution covered:
+        </p>
+        <ul>
+          <li>
+            <strong>Blade Inheritance Hierarchies:</strong> Architected the unified global structural grid using parent-child Blade templates 
+            (<code>layouts.app</code>) to ensure complete responsive consistency and low layout shifting across disparate viewpoint distributions.
+          </li>
+          <li>
+            <strong>State-Driven Interface Components:</strong> Programmed responsive transaction modallings and asynchronous input capture systems 
+            powering the interactive <code>expenses.index</code>, <code>expenses.create</code>, and <code>expenses.edit</code> template views.
+          </li>
+          <li>
+            <strong>Localization Injection:</strong> Implemented customizable locale mapping middleware parameters to safely bind dynamically 
+            injected translation dictionary indices directly inside layout fields.
+          </li>
+          <li>
+            <strong>Transient File-Stream UX:</strong> Coordinated UI triggers with backend routes to manage temporal asset staging inside local data directories 
+            prior to committing finalized operational schemas.
+          </li>
+        </ul>
+      </div>
+
+      <div class="img-placeholder" style="aspect-ratio: 4/3;">
+        <span class="ph-icon">📊</span>
+        <span>[UI Showcase: Real-time Budget Consumption Progress Bars by Category &amp; Interactive Asynchronous Modal Ingestion]</span>
+      </div>
+
+      <h2 class="detail-section-title">Backend Architecture &amp; Data Schema</h2>
+      <div class="detail-content">
+        <p>
+          Beyond processing image files, the platform utilizes relational <strong>Eloquent ORM models</strong> to track state distributions across 
+          segmented budgets (<code>transportation</code>, <code>food</code>, <code>home_utilities</code>, and <code>entertainment</code>). 
+        </p>
+        <p>
+          The underlying transactional scheme securely handles state verification and user configuration settings across specialized 
+          middleware routers (<code>LocaleMiddleware</code> and <code>CheckSession</code>). This structure keeps active session data completely clean 
+          while running monthly cumulative aggregation query filters directly in the SQL engine to calculate active remaining balances.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Timeline</div>
+        <div class="detail-sidebar-value">Nov 2025 – Jan 2026</div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Role</div>
+        <div class="detail-sidebar-value">Full-Stack Engineer</div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Tech Stack</div>
+        <div class="detail-tag-list">
+          <span class="detail-tag">PHP</span>
+          <span class="detail-tag">Laravel</span>
+          <span class="detail-tag">MySQL</span>
+          <span class="detail-tag">Blade Templates</span>
+          <span class="detail-tag">Vite</span>
+          <span class="detail-tag">Groq Vision API</span>
+          <span class="detail-tag">Tesseract OCR</span>
+          <span class="detail-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Architecture</div>
+        <div class="detail-sidebar-value">Model-View-Controller (MVC) with Polymorphic AI Fallbacks</div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Domains</div>
+        <div class="detail-tag-list">
+          <span class="detail-tag">Full-Stack Engineering</span>
+          <span class="detail-tag">Vision AI Ingestion</span>
+          <span class="detail-tag">Relational Schemas</span>
+          <span class="detail-tag">UI/UX Systems</span>
+        </div>
+      </div>
+      <div class="detail-sidebar-card">
+        <div class="detail-sidebar-label">Links</div>
+        <div class="detail-sidebar-value">
+          <a href="https://github.com/DavidHaryono/Financial-Tracker" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-weight: 600;">
+            GitHub Repository &#8599;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 David Alexander Haryono</span>
+    <a href="index.html#projects" style="color: var(--text-muted); text-decoration: none;">&#8592; All Projects</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
