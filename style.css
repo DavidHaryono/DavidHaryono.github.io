@@ -574,6 +574,10 @@ body.light .cursor-glow {
   padding: 140px 48px 60px;
   border-bottom: 1px solid var(--border);
 }
+.detail-content {
+  margin-bottom: 32px;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
